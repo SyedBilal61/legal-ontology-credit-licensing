@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ex="http://www.example.org/credit-licensing-ontology#"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <Ontology>
+        <dc:creator>Syed Bilal Hassan</dc:creator>
+        <dc:title>Credit Activities Licensing Ontology</dc:title>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#getPenalty -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#getPenalty">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Penalty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasDefence -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasDefence">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Defence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasOffence -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasOffence">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Offence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Principal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Principal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate -->
+
+    <DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#isValidLicense -->
+
+    <DatatypeProperty rdf:about="http://www.example.org/credit-licensing-ontology#isValidLicense">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#License"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#licenseNumber -->
+
+    <DatatypeProperty rdf:about="http://www.example.org/credit-licensing-ontology#licenseNumber">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#License"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>Any Agent who involves in a Credit Activity</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BodyCorporate -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#BodyCorporate">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Principal"/>
+        <rdfs:comment>A legal entity such as a company that may act as a principal</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasDefence"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Offence"/>
+        <rdfs:comment>An agent who committed an offence but has a valid defence</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#getPenalty"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Offence"/>
+        <rdfs:comment>An agent who committed an offence and received a civil penalty</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.example.org/credit-licensing-ontology#isValidLicense"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>An agent who holds a valid license and performs credit activity</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>An agent acting on behalf of a licensed principal within authorized credit activity</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.example.org/credit-licensing-ontology#isValidLicense"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>An Agent who is acting on a behalf of a principal and or a representative of body corporate(exempted from licensing requirements)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.example.org/credit-licensing-ontology#isValidLicense"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasValue>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>An agent who does not satisfy any of the R3 conditions</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Test_Offending -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Test_Offending">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#hasOffence"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>Any agent who committed an offence under Section 29</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.example.org/credit-licensing-ontology#isValidLicense"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasValue>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Offence"/>
+        <rdfs:comment>An offence where an agent engaged in credit activity without holding a license</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Agent -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Agent"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Conduct -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Conduct"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#CourtCase -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#CourtCase"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#CreditActivity -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#CreditActivity"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#CreditRepresentative -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#CreditRepresentative"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Defence -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Defence">
+        <rdfs:comment>A condition that excuses the agent’s conduct, as defined in Section 29(3) and 29(4)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Director -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Director"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Employee -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Employee"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#License -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#License">
+        <rdfs:comment>A license that authorizes a person to engage in credit activity</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Offence -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Offence">
+        <rdfs:comment>An unlawful action that violates Section 29</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Penalty -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Penalty">
+        <rdfs:comment>An agent who committed an activity without a licencse or all three R3 condtions can have a penalty that may be imprisonment or fine upto 5000 or both</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Person -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Person"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Principal -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Principal">
+        <rdfs:comment>The person or entity on whose behalf an agent may act.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#Requirement -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#Requirement"/>
+    
+
+
+    <!-- http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence -->
+
+    <Class rdf:about="http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#A2 -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#A2">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:isActingOnBehalfOfPrincipal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isActingOnBehalfOfPrincipal>
+        <ont:isPrincipalElectedInParliament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:isPrincipalElectedInParliament>
+        <ont:isPrincipalHoldingCreditActivity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isPrincipalHoldingCreditActivity>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AgentOffending1 -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AgentOffending1">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:hasOffence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:hasOffence>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:hasDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:hasDefence>
+        <ont:hasOffence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:hasOffence>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ex:isValidLicense rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isValidLicense>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Agent_R3C -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Agent_R3C">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:isActingOnBehalfOfPrincipal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isActingOnBehalfOfPrincipal>
+        <ont:isPrincipalElectedInParliament rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:isPrincipalElectedInParliament>
+        <ont:isRepresentativeOfBodyCorporate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:isRepresentativeOfBodyCorporate>
+        <ex:isValidLicense rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:isValidLicense>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:getPenalty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:getPenalty>
+        <ont:hasOffence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:hasOffence>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BadAgent -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#BadAgent">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:getPenalty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:getPenalty>
+        <ex:isValidLicense rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:isValidLicense>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CignoAustralia -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#CignoAustralia">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:getPenalty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:getPenalty>
+        <ont:hasDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:hasDefence>
+        <ont:hasOffence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:hasOffence>
+        <ex:isValidLicense rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:isValidLicense>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#bsfSolutions -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#bsfSolutions">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:getPenalty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:getPenalty>
+        <ont:hasDefence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ont:hasDefence>
+        <ont:hasOffence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:hasOffence>
+        <ex:isValidLicense rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:isValidLicense>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent -->
+
+    <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <ont:hasOffence rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ont:hasOffence>
+        <ex:isValidLicense rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:isValidLicense>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
