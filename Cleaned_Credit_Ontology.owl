@@ -10,7 +10,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dcterms="http://purl.org/dc/terms/">
-    <Ontology>
+    <Ontology rdf:about="http://creditontology.com/section29#">
         <dc:creator>Syed Bilal Hassan</dc:creator>
         <dc:title>Credit Activities Licensing Ontology</dc:title>
     </Ontology>
@@ -55,11 +55,47 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creditontology.com/section29#actsOnBehalfOf -->
+
+    <ObjectProperty rdf:about="http://creditontology.com/section29#actsOnBehalfOf">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
+        <rdfs:range rdf:resource="http://www.example.org/credit-licensing-ontology#Principal"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://creditontology.com/section29#isExemptPrincipal -->
+
+    <DatatypeProperty rdf:about="http://creditontology.com/section29#isExemptPrincipal">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://creditontology.com/section29#isWithInAuthority -->
+
+    <DatatypeProperty rdf:about="http://creditontology.com/section29#isWithInAuthority">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
     
 
 
@@ -152,6 +188,93 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://creditontology.com/section29#ExemptPrincipalDefence -->
+
+    <Class rdf:about="http://creditontology.com/section29#ExemptPrincipalDefence">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://creditontology.com/section29#actsOnBehalfOf"/>
+                        <someValuesFrom>
+                            <Class>
+                                <intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.example.org/credit-licensing-ontology#Principal"/>
+                                    <Restriction>
+                                        <onProperty rdf:resource="http://creditontology.com/section29#isExemptPrincipal"/>
+                                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                                    </Restriction>
+                                </intersectionOf>
+                            </Class>
+                        </someValuesFrom>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://creditontology.com/section29#isWithInAuthority"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://creditontology.com/section29#LicensedPrincipal -->
+
+    <Class rdf:about="http://creditontology.com/section29#LicensedPrincipal">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/credit-licensing-ontology#Principal"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.example.org/credit-licensing-ontology#isValidLicense"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://creditontology.com/section29#RepresentativeDefence -->
+
+    <Class rdf:about="http://creditontology.com/section29#RepresentativeDefence">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://creditontology.com/section29#StaffOrRepresentative"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://creditontology.com/section29#actsOnBehalfOf"/>
+                        <someValuesFrom rdf:resource="http://creditontology.com/section29#LicensedPrincipal"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://creditontology.com/section29#isWithInAuthority"/>
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasValue>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://creditontology.com/section29#StaffOrRepresentative -->
+
+    <Class rdf:about="http://creditontology.com/section29#StaffOrRepresentative">
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/credit-licensing-ontology#CreditRepresentative"/>
+                    <rdf:Description rdf:about="http://www.example.org/credit-licensing-ontology#Director"/>
+                    <rdf:Description rdf:about="http://www.example.org/credit-licensing-ontology#Employee"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
     
 
 
