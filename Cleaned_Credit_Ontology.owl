@@ -9,7 +9,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:section29="http://creditontology.com/section29#">
     <Ontology rdf:about="http://creditontology.com/section29#">
         <dc:creator>Syed Bilal Hassan</dc:creator>
         <dc:title>Credit Activities Licensing Ontology</dc:title>
@@ -68,6 +69,33 @@
     <ObjectProperty rdf:about="http://creditontology.com/section29#actsOnBehalfOf">
         <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
         <rdfs:range rdf:resource="http://www.example.org/credit-licensing-ontology#Principal"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://creditontology.com/section29#hasDefence -->
+
+    <ObjectProperty rdf:about="http://creditontology.com/section29#hasDefence">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.example.org/credit-licensing-ontology#Defence"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://creditontology.com/section29#hasEngagedIn -->
+
+    <ObjectProperty rdf:about="http://creditontology.com/section29#hasEngagedIn">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.example.org/credit-licensing-ontology#CreditActivity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://creditontology.com/section29#hasLicense -->
+
+    <ObjectProperty rdf:about="http://creditontology.com/section29#hasLicense">
+        <rdfs:domain rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:range rdf:resource="http://www.example.org/credit-licensing-ontology#License"/>
     </ObjectProperty>
     
 
@@ -191,6 +219,24 @@
     
 
 
+    <!-- http://creditontology.com/section29#CompliantAgent -->
+
+    <Class rdf:about="http://creditontology.com/section29#CompliantAgent">
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b"/>
+                    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>If an agent satisfies one of the permission rules, it is compliant.</rdfs:comment>
+    </Class>
+    
+
+
     <!-- http://creditontology.com/section29#ExemptPrincipalDefence -->
 
     <Class rdf:about="http://creditontology.com/section29#ExemptPrincipalDefence">
@@ -240,6 +286,21 @@
     
 
 
+    <!-- http://creditontology.com/section29#NonCompliantAgent -->
+
+    <Class rdf:about="http://creditontology.com/section29#NonCompliantAgent">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.example.org/credit-licensing-ontology#isValidLicense"/>
+                <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasValue>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
+        <rdfs:comment>An agent who does not satisfy any of the R3 conditions</rdfs:comment>
+    </Class>
+    
+
+
     <!-- http://creditontology.com/section29#RepresentativeDefence -->
 
     <Class rdf:about="http://creditontology.com/section29#RepresentativeDefence">
@@ -281,6 +342,17 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity -->
 
     <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/credit-licensing-ontology#Agent"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://creditontology.com/section29#hasEngagedIn"/>
+                        <someValuesFrom rdf:resource="http://www.example.org/credit-licensing-ontology#CreditActivity"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/credit-licensing-ontology#Agent"/>
         <rdfs:comment>Any Agent who involves in a Credit Activity</rdfs:comment>
     </Class>
@@ -551,6 +623,20 @@
     
 
 
+    <!-- http://creditontology.com/section29#CreditActivity -->
+
+    <NamedIndividual rdf:about="http://creditontology.com/section29#CreditActivity"/>
+    
+
+
+    <!-- http://creditontology.com/section29#a9 -->
+
+    <NamedIndividual rdf:about="http://creditontology.com/section29#a9">
+        <section29:hasEngagedIn rdf:resource="http://creditontology.com/section29#CreditActivity"/>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#A2 -->
 
     <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#A2">
@@ -584,6 +670,7 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense -->
 
     <NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense">
+        <rdf:type rdf:resource="http://creditontology.com/section29#CompliantAgent"/>
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"/>
         <ex:isValidLicense rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isValidLicense>
     </NamedIndividual>
