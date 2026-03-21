@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Credit Activities Licensing Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://creditontology.com/section29#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://creditontology.com/section29#","name":"Credit Activities Licensing Ontology", "headline":"Document describing the ontology http://creditontology.com/section29#", "dateReleased":"Sat Mar 21 08:34:27 CET 2026", "author":[{"@type":"Person","name":"Syed Bilal Hassan"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Credit Activities Licensing Ontology</h1>
+
+
+<dl>
+<dt>Authors:</dt>
+<dd>Syed Bilal Hassan</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Syed Bilal Hassan. Credit Activities Licensing Ontology.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Credit Activities Licensing Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Agent"
+         title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity"
+         title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#BodyCorporate"
+         title="http://www.co-ode.org/ontologies/ont.owl#BodyCorporate">BodyCorporate</a>
+   </li>
+   <li>
+      <a href="#CompliantAgent"
+         title="http://creditontology.com/section29#CompliantAgent">CompliantAgent</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Conduct"
+         title="http://www.example.org/credit-licensing-ontology#Conduct">Conduct</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#CourtCase"
+         title="http://www.example.org/credit-licensing-ontology#CourtCase">CourtCase</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#CreditActivity"
+         title="http://www.example.org/credit-licensing-ontology#CreditActivity">CreditActivity</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#CreditRepresentative"
+         title="http://www.example.org/credit-licensing-ontology#CreditRepresentative">CreditRepresentative</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Defence"
+         title="http://www.example.org/credit-licensing-ontology#Defence">Defence</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Director"
+         title="http://www.example.org/credit-licensing-ontology#Director">Director</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Employee"
+         title="http://www.example.org/credit-licensing-ontology#Employee">Employee</a>
+   </li>
+   <li>
+      <a href="#ExemptPrincipalDefence"
+         title="http://creditontology.com/section29#ExemptPrincipalDefence">ExemptPrincipalDefence</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#License"
+         title="http://www.example.org/credit-licensing-ontology#License">License</a>
+   </li>
+   <li>
+      <a href="#LicensedPrincipal"
+         title="http://creditontology.com/section29#LicensedPrincipal">LicensedPrincipal</a>
+   </li>
+   <li>
+      <a href="#NonCompliantAgent"
+         title="http://creditontology.com/section29#NonCompliantAgent">NonCompliantAgent</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Offence"
+         title="http://www.example.org/credit-licensing-ontology#Offence">Offence</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence"
+         title="http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence">OffenceWithDefence</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty"
+         title="http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty">OffenceWithPenalty</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Penalty"
+         title="http://www.example.org/credit-licensing-ontology#Penalty">Penalty</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a"
+         title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a">PermittedAgent_R3a</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b"
+         title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b">PermittedAgent_R3b</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c"
+         title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c">PermittedAgent_R3c</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Person"
+         title="http://www.example.org/credit-licensing-ontology#Person">Person</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Principal"
+         title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a>
+   </li>
+   <li>
+      <a href="#RepresentativeDefence"
+         title="http://creditontology.com/section29#RepresentativeDefence">RepresentativeDefence</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#Requirement"
+         title="http://www.example.org/credit-licensing-ontology#Requirement">Requirment</a>
+   </li>
+   <li>
+      <a href="#StaffOrRepresentative"
+         title="http://creditontology.com/section29#StaffOrRepresentative">StaffOrRepresentative</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant"
+         title="http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant">Test_NonCompliant</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#Test_Offending"
+         title="http://www.co-ode.org/ontologies/ont.owl#Test_Offending">Test_Offending</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence"
+         title="http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence">UnlicensedCreditOffence</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence"
+         title="http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence">UnlicensedCreditOffence</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#actsOnBehalfOf"
+         title="http://creditontology.com/section29#actsOnBehalfOf">actsOnBehalfOf</a>
+   </li>
+   <li>
+      <a href="#hasDefence" title="http://creditontology.com/section29#hasDefence">hasDefence</a>
+   </li>
+   <li>
+      <a href="#hasEngagedIn" title="http://creditontology.com/section29#hasEngagedIn">hasEngagedIn</a>
+   </li>
+   <li>
+      <a href="#hasLicense" title="http://creditontology.com/section29#hasLicense">hasLicense</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty"
+         title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#hasDefence"
+         title="http://www.co-ode.org/ontologies/ont.owl#hasDefence">hasDefence</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence"
+         title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal"
+         title="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">isActingOnBehalfOfPrincipal</a>
+   </li>
+   <li>
+      <a href="#isExemptPrincipal"
+         title="http://creditontology.com/section29#isExemptPrincipal">isExemptPrinicipal</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity"
+         title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity">isPrinicpalHoldingCreditActivity</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament"
+         title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">isPrinicpalHoldingElectedParliament</a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate"
+         title="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate">isRepresentativeOfBodyCorporate</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense"
+         title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a>
+   </li>
+   <li>
+      <a href="#isWithInAuthority"
+         title="http://creditontology.com/section29#isWithInAuthority">isWithInAuthority</a>
+   </li>
+   <li>
+      <a href="#http://www.example.org/credit-licensing-ontology#licenseNumber"
+         title="http://www.example.org/credit-licensing-ontology#licenseNumber">LicenceNumber</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#A2" title="http://www.co-ode.org/ontologies/ont.owl#A2">
+         <span>A2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#a9" title="http://creditontology.com/section29#a9">
+         <span>a9</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentOffending1"
+         title="http://www.co-ode.org/ontologies/ont.owl#AgentOffending1">
+         <span>Agent Offending1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#Agent_R3C"
+         title="http://www.co-ode.org/ontologies/ont.owl#Agent_R3C">
+         <span>Agent R3 C</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence"
+         title="http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence">
+         <span>Agent With Defence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense"
+         title="http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense">
+         <span>Agent With License</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty"
+         title="http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty">
+         <span>Agentwith Penalty</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#BadAgent"
+         title="http://www.co-ode.org/ontologies/ont.owl#BadAgent">
+         <span>Bad Agent</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#bsfSolutions"
+         title="http://www.co-ode.org/ontologies/ont.owl#bsfSolutions">
+         <span>bsf Solutions</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#CignoAustralia"
+         title="http://www.co-ode.org/ontologies/ont.owl#CignoAustralia">
+         <span>Cigno Australia</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent"
+         title="http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent">
+         <span>un Lic Off Agent</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Credit Activities Licensing Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.
+
+</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Credit Activities Licensing Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Credit Activities Licensing Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#BodyCorporate" title="http://www.co-ode.org/ontologies/ont.owl#BodyCorporate">BodyCorporate</a></li>
+  <li><a href="#CompliantAgent" title="http://creditontology.com/section29#CompliantAgent">CompliantAgent</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Conduct" title="http://www.example.org/credit-licensing-ontology#Conduct">Conduct</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#CourtCase" title="http://www.example.org/credit-licensing-ontology#CourtCase">CourtCase</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#CreditActivity" title="http://www.example.org/credit-licensing-ontology#CreditActivity">CreditActivity</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#CreditRepresentative" title="http://www.example.org/credit-licensing-ontology#CreditRepresentative">CreditRepresentative</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Defence" title="http://www.example.org/credit-licensing-ontology#Defence">Defence</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Director" title="http://www.example.org/credit-licensing-ontology#Director">Director</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Employee" title="http://www.example.org/credit-licensing-ontology#Employee">Employee</a></li>
+  <li><a href="#ExemptPrincipalDefence" title="http://creditontology.com/section29#ExemptPrincipalDefence">ExemptPrincipalDefence</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#License" title="http://www.example.org/credit-licensing-ontology#License">License</a></li>
+  <li><a href="#LicensedPrincipal" title="http://creditontology.com/section29#LicensedPrincipal">LicensedPrincipal</a></li>
+  <li><a href="#NonCompliantAgent" title="http://creditontology.com/section29#NonCompliantAgent">NonCompliantAgent</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Offence" title="http://www.example.org/credit-licensing-ontology#Offence">Offence</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence" title="http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence">OffenceWithDefence</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty" title="http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty">OffenceWithPenalty</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Penalty" title="http://www.example.org/credit-licensing-ontology#Penalty">Penalty</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a">PermittedAgent_R3a</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b">PermittedAgent_R3b</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c">PermittedAgent_R3c</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Person" title="http://www.example.org/credit-licensing-ontology#Person">Person</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Principal" title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a></li>
+  <li><a href="#RepresentativeDefence" title="http://creditontology.com/section29#RepresentativeDefence">RepresentativeDefence</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#Requirement" title="http://www.example.org/credit-licensing-ontology#Requirement">Requirment</a></li>
+  <li><a href="#StaffOrRepresentative" title="http://creditontology.com/section29#StaffOrRepresentative">StaffOrRepresentative</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant" title="http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant">Test_NonCompliant</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#Test_Offending" title="http://www.co-ode.org/ontologies/ont.owl#Test_Offending">Test_Offending</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence" title="http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence">UnlicensedCreditOffence</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence" title="http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence">UnlicensedCreditOffence</a></li>
+ </ul>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Agent">
+  <h3>Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Agent</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>, <a href="#CompliantAgent" title="http://creditontology.com/section29#CompliantAgent">CompliantAgent</a> <sup class="type-c" title="class">c</sup>, <a href="#NonCompliantAgent" title="http://creditontology.com/section29#NonCompliantAgent">NonCompliantAgent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a">PermittedAgent_R3a</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b">PermittedAgent_R3b</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c">PermittedAgent_R3c</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant" title="http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant">Test_NonCompliant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#Test_Offending" title="http://www.co-ode.org/ontologies/ont.owl#Test_Offending">Test_Offending</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDefence" title="http://creditontology.com/section29#hasDefence">hasDefence</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEngagedIn" title="http://creditontology.com/section29#hasEngagedIn">hasEngagedIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLicense" title="http://creditontology.com/section29#hasLicense">hasLicense</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate" title="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate">isRepresentativeOfBodyCorporate</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">
+  <h3>AgentEngagingCreditActivity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity</p>
+  <div class="comment">
+   <span class="markdown">Any Agent who involves in a Credit Activity</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#hasEngagedIn" title="http://creditontology.com/section29#hasEngagedIn">hasEngagedIn</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://www.example.org/credit-licensing-ontology#CreditActivity" title="http://www.example.org/credit-licensing-ontology#CreditActivity">CreditActivity</a> <sup class="type-c" title="class">c</sup>)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#actsOnBehalfOf" title="http://creditontology.com/section29#actsOnBehalfOf">actsOnBehalfOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal" title="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">isActingOnBehalfOfPrincipal</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#A2" title="http://www.co-ode.org/ontologies/ont.owl#A2">A2</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentOffending1" title="http://www.co-ode.org/ontologies/ont.owl#AgentOffending1">Agent Offending1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#Agent_R3C" title="http://www.co-ode.org/ontologies/ont.owl#Agent_R3C">Agent R3 C</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence" title="http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence">Agent With Defence</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense" title="http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense">Agent With License</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty" title="http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty">Agentwith Penalty</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#BadAgent" title="http://www.co-ode.org/ontologies/ont.owl#BadAgent">Bad Agent</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#CignoAustralia" title="http://www.co-ode.org/ontologies/ont.owl#CignoAustralia">Cigno Australia</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#bsfSolutions" title="http://www.co-ode.org/ontologies/ont.owl#bsfSolutions">bsf Solutions</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent" title="http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent">un Lic Off Agent</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#BodyCorporate">
+  <h3>BodyCorporate<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#BodyCorporate</p>
+  <div class="comment">
+   <span class="markdown">A legal entity such as a company that may act as a principal</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Principal" title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CompliantAgent">
+  <h3>CompliantAgent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#CompliantAgent</p>
+  <div class="comment">
+   <span class="markdown">If an agent satisfies one of the permission rules, it is compliant.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a">PermittedAgent_R3a</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b">PermittedAgent_R3b</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c" title="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c">PermittedAgent_R3c</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense" title="http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense">Agent With License</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Conduct">
+  <h3>Conduct<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Conduct</p>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#CourtCase">
+  <h3>CourtCase<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#CourtCase</p>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#CreditActivity">
+  <h3>CreditActivity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#CreditActivity</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEngagedIn" title="http://creditontology.com/section29#hasEngagedIn">hasEngagedIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#CreditRepresentative">
+  <h3>CreditRepresentative<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#CreditRepresentative</p>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Defence">
+  <h3>Defence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Defence</p>
+  <div class="comment">
+   <span class="markdown">A condition that excuses the agent’s conduct, as defined in Section 29(3) and 29(4)</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasDefence" title="http://www.co-ode.org/ontologies/ont.owl#hasDefence">hasDefence</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDefence" title="http://creditontology.com/section29#hasDefence">hasDefence</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Director">
+  <h3>Director<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Director</p>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Employee">
+  <h3>Employee<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Employee</p>
+ </div>
+ <div class="entity" id="ExemptPrincipalDefence">
+  <h3>ExemptPrincipalDefence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#ExemptPrincipalDefence</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    (<a href="#actsOnBehalfOf" title="http://creditontology.com/section29#actsOnBehalfOf">actsOnBehalfOf</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://www.example.org/credit-licensing-ontology#Principal" title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#isExemptPrincipal" title="http://creditontology.com/section29#isExemptPrincipal">isExemptPrinicipal</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true)) <span class="logic">and</span> (<a href="#isWithInAuthority" title="http://creditontology.com/section29#isWithInAuthority">isWithInAuthority</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true)
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#License">
+  <h3>License<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#License</p>
+  <div class="comment">
+   <span class="markdown">A license that authorizes a person to engage in credit activity</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#licenseNumber" title="http://www.example.org/credit-licensing-ontology#licenseNumber">LicenceNumber</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasLicense" title="http://creditontology.com/section29#hasLicense">hasLicense</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LicensedPrincipal">
+  <h3>LicensedPrincipal<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#LicensedPrincipal</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Principal" title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true)
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NonCompliantAgent">
+  <h3>NonCompliantAgent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#NonCompliantAgent</p>
+  <div class="comment">
+   <span class="markdown">An agent who does not satisfy any of the R3 conditions</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> false
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Offence">
+  <h3>Offence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Offence</p>
+  <div class="comment">
+   <span class="markdown">An unlawful action that violates Section 29</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence" title="http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence">OffenceWithDefence</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty" title="http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty">OffenceWithPenalty</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence" title="http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence">UnlicensedCreditOffence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence">
+  <h3>OffenceWithDefence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence</p>
+  <div class="comment">
+   <span class="markdown">An agent who committed an offence but has a valid defence</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasDefence" title="http://www.co-ode.org/ontologies/ont.owl#hasDefence">hasDefence</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Offence" title="http://www.example.org/credit-licensing-ontology#Offence">Offence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty">
+  <h3>OffenceWithPenalty<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty</p>
+  <div class="comment">
+   <span class="markdown">An agent who committed an offence and received a civil penalty</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty" title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Offence" title="http://www.example.org/credit-licensing-ontology#Offence">Offence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Penalty">
+  <h3>Penalty<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Penalty</p>
+  <div class="comment">
+   <span class="markdown">An agent who committed an activity without a licencse or all three R3 condtions can have a penalty that may be imprisonment or fine upto 5000 or both</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty" title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a">
+  <h3>PermittedAgent_R3a<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a</p>
+  <div class="comment">
+   <span class="markdown">An agent who holds a valid license and performs credit activity</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b">
+  <h3>PermittedAgent_R3b<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b</p>
+  <div class="comment">
+   <span class="markdown">An agent acting on behalf of a licensed principal within authorized credit activity</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    (<a href="#http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal" title="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">isActingOnBehalfOfPrincipal</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true) <span class="logic">and</span> (<a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">isPrinicpalHoldingElectedParliament</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> false) <span class="logic">and</span> (<a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity">isPrinicpalHoldingCreditActivity</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c">
+  <h3>PermittedAgent_R3c<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c</p>
+  <div class="comment">
+   <span class="markdown">An Agent who is acting on a behalf of a principal and or a representative of body corporate(exempted from licensing requirements)</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    (<a href="#http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal" title="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">isActingOnBehalfOfPrincipal</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true) <span class="logic">and</span> (<a href="#http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate" title="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate">isRepresentativeOfBodyCorporate</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true) <span class="logic">and</span> (<a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> false)
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Person">
+  <h3>Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Person</p>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Principal">
+  <h3>Prinicpal<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Principal</p>
+  <div class="comment">
+   <span class="markdown">The person or entity on whose behalf an agent may act.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#BodyCorporate" title="http://www.co-ode.org/ontologies/ont.owl#BodyCorporate">BodyCorporate</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity">isPrinicpalHoldingCreditActivity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">isPrinicpalHoldingElectedParliament</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#actsOnBehalfOf" title="http://creditontology.com/section29#actsOnBehalfOf">actsOnBehalfOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RepresentativeDefence">
+  <h3>RepresentativeDefence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#RepresentativeDefence</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#StaffOrRepresentative" title="http://creditontology.com/section29#StaffOrRepresentative">StaffOrRepresentative</a> <sup class="type-c" title="class">c</sup> <span class="logic">and</span> (<a href="#actsOnBehalfOf" title="http://creditontology.com/section29#actsOnBehalfOf">actsOnBehalfOf</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#LicensedPrincipal" title="http://creditontology.com/section29#LicensedPrincipal">LicensedPrincipal</a> <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#isWithInAuthority" title="http://creditontology.com/section29#isWithInAuthority">isWithInAuthority</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true)
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#Requirement">
+  <h3>Requirment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#Requirement</p>
+ </div>
+ <div class="entity" id="StaffOrRepresentative">
+  <h3>StaffOrRepresentative<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#StaffOrRepresentative</p>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#CreditRepresentative" title="http://www.example.org/credit-licensing-ontology#CreditRepresentative">CreditRepresentative</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.example.org/credit-licensing-ontology#Director" title="http://www.example.org/credit-licensing-ontology#Director">Director</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.example.org/credit-licensing-ontology#Employee" title="http://www.example.org/credit-licensing-ontology#Employee">Employee</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant">
+  <h3>Test_NonCompliant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant</p>
+  <div class="comment">
+   <span class="markdown">An agent who does not satisfy any of the R3 conditions</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> false
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#Test_Offending">
+  <h3>Test_Offending<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#Test_Offending</p>
+  <div class="comment">
+   <span class="markdown">Any agent who committed an offence under Section 29</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> true
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence">
+  <h3>UnlicensedCreditOffence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence</p>
+  <div class="comment">
+   <span class="markdown">An offence where an agent engaged in credit activity without holding a license</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="logic">value</span> false
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#Offence" title="http://www.example.org/credit-licensing-ontology#Offence">Offence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence">
+  <h3>UnlicensedCreditOffence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#actsOnBehalfOf" title="http://creditontology.com/section29#actsOnBehalfOf">actsOnBehalfOf</a></li>
+  <li><a href="#hasDefence" title="http://creditontology.com/section29#hasDefence">hasDefence</a></li>
+  <li><a href="#hasEngagedIn" title="http://creditontology.com/section29#hasEngagedIn">hasEngagedIn</a></li>
+  <li><a href="#hasLicense" title="http://creditontology.com/section29#hasLicense">hasLicense</a></li>
+ </ul>
+ <div class="entity" id="actsOnBehalfOf">
+  <h3>actsOnBehalfOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#actsOnBehalfOf</p>
+  <div class="comment">
+   <span class="markdown">Acting on Behalf of Principal</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Principal" title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDefence">
+  <h3>hasDefence<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#hasDefence</p>
+  <div class="comment">
+   <span class="markdown">they Must have a defence</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Defence" title="http://www.example.org/credit-licensing-ontology#Defence">Defence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEngagedIn">
+  <h3>hasEngagedIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#hasEngagedIn</p>
+  <div class="comment">
+   <span class="markdown">Engage in a credit Activity</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#CreditActivity" title="http://www.example.org/credit-licensing-ontology#CreditActivity">CreditActivity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLicense">
+  <h3>hasLicense<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#hasLicense</p>
+  <div class="comment">
+   <span class="markdown">For engaging in Credit Activity there is need of license that is required</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#License" title="http://www.example.org/credit-licensing-ontology#License">License</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty" title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#hasDefence" title="http://www.co-ode.org/ontologies/ont.owl#hasDefence">hasDefence</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal" title="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">isActingOnBehalfOfPrincipal</a></li>
+  <li><a href="#isExemptPrincipal" title="http://creditontology.com/section29#isExemptPrincipal">isExemptPrinicipal</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity">isPrinicpalHoldingCreditActivity</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">isPrinicpalHoldingElectedParliament</a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate" title="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate">isRepresentativeOfBodyCorporate</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a></li>
+  <li><a href="#isWithInAuthority" title="http://creditontology.com/section29#isWithInAuthority">isWithInAuthority</a></li>
+  <li><a href="#http://www.example.org/credit-licensing-ontology#licenseNumber" title="http://www.example.org/credit-licensing-ontology#licenseNumber">LicenceNumber</a></li>
+ </ul>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#getPenalty">
+  <h3>getPanalty<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#getPenalty</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Penalty" title="http://www.example.org/credit-licensing-ontology#Penalty">Penalty</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#hasDefence">
+  <h3>hasDefence<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#hasDefence</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Defence" title="http://www.example.org/credit-licensing-ontology#Defence">Defence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#hasOffence">
+  <h3>hasOffence<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#hasOffence</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Offence" title="http://www.example.org/credit-licensing-ontology#Offence">Offence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">
+  <h3>isActingOnBehalfOfPrincipal<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isExemptPrincipal">
+  <h3>isExemptPrinicipal<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#isExemptPrincipal</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity">
+  <h3>isPrinicpalHoldingCreditActivity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Principal" title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">
+  <h3>isPrinicpalHoldingElectedParliament<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Principal" title="http://www.example.org/credit-licensing-ontology#Principal">Prinicpal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate">
+  <h3>isRepresentativeOfBodyCorporate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#Agent" title="http://www.example.org/credit-licensing-ontology#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#isValidLicense">
+  <h3>isValidLicense<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#isValidLicense</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#License" title="http://www.example.org/credit-licensing-ontology#License">License</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isWithInAuthority">
+  <h3>isWithInAuthority<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#isWithInAuthority</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.example.org/credit-licensing-ontology#licenseNumber">
+  <h3>LicenceNumber<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.example.org/credit-licensing-ontology#licenseNumber</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.example.org/credit-licensing-ontology#License" title="http://www.example.org/credit-licensing-ontology#License">License</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#A2" title="http://www.co-ode.org/ontologies/ont.owl#A2"> <span>A2</span> </a></li>
+  <li><a href="#a9" title="http://creditontology.com/section29#a9"> <span>a9</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#AgentOffending1" title="http://www.co-ode.org/ontologies/ont.owl#AgentOffending1"> <span>Agent Offending1</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#Agent_R3C" title="http://www.co-ode.org/ontologies/ont.owl#Agent_R3C"> <span>Agent R3 C</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence" title="http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence"> <span>Agent With Defence</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense" title="http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense"> <span>Agent With License</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty" title="http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty"> <span>Agentwith Penalty</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#BadAgent" title="http://www.co-ode.org/ontologies/ont.owl#BadAgent"> <span>Bad Agent</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#bsfSolutions" title="http://www.co-ode.org/ontologies/ont.owl#bsfSolutions"> <span>bsf Solutions</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#CignoAustralia" title="http://www.co-ode.org/ontologies/ont.owl#CignoAustralia"> <span>Cigno Australia</span> </a></li>
+  <li><a href="#http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent" title="http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent"> <span>un Lic Off Agent</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#A2">
+  <h3>A2<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#A2</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal" title="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">isActingOnBehalfOfPrincipal</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">isPrinicpalHoldingElectedParliament</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity">isPrinicpalHoldingCreditActivity</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="a9">
+  <h3>a9<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://creditontology.com/section29#a9</p>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasEngagedIn" title="http://creditontology.com/section29#hasEngagedIn">hasEngagedIn</a> <sup class="type-op" title="object property">op</sup> <a href="http://creditontology.com/section29#CreditActivity" target="_blank" title="http://creditontology.com/section29#CreditActivity">Credit Activity</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#AgentOffending1">
+  <h3>Agent Offending1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#AgentOffending1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#Agent_R3C">
+  <h3>Agent R3 C<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#Agent_R3C</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal" title="http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal">isActingOnBehalfOfPrincipal</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament" title="http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament">isPrinicpalHoldingElectedParliament</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate" title="http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate">isRepresentativeOfBodyCorporate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence">
+  <h3>Agent With Defence<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasDefence" title="http://www.co-ode.org/ontologies/ont.owl#hasDefence">hasDefence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense">
+  <h3>Agent With License<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CompliantAgent" title="http://creditontology.com/section29#CompliantAgent">CompliantAgent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty">
+  <h3>Agentwith Penalty<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty" title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#BadAgent">
+  <h3>Bad Agent<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#BadAgent</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty" title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#bsfSolutions">
+  <h3>bsf Solutions<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#bsfSolutions</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty" title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasDefence" title="http://www.co-ode.org/ontologies/ont.owl#hasDefence">hasDefence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#CignoAustralia">
+  <h3>Cigno Australia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#CignoAustralia</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#getPenalty" title="http://www.co-ode.org/ontologies/ont.owl#getPenalty">getPanalty</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasDefence" title="http://www.co-ode.org/ontologies/ont.owl#hasDefence">hasDefence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent">
+  <h3>un Lic Off Agent<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity" title="http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity">AgentEngagingCreditActivity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://www.co-ode.org/ontologies/ont.owl#hasOffence" title="http://www.co-ode.org/ontologies/ont.owl#hasOffence">hasOffence</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://www.example.org/credit-licensing-ontology#isValidLicense" title="http://www.example.org/credit-licensing-ontology#isValidLicense">isValidLicense</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<http://creditontology.com/section29#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://creditontology.com/section29#> <http://purl.org/dc/elements/1.1/creator> "Syed Bilal Hassan" .
+<http://creditontology.com/section29#> <http://purl.org/dc/elements/1.1/title> "Credit Activities Licensing Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://creditontology.com/section29#actsOnBehalfOf
+<http://creditontology.com/section29#actsOnBehalfOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creditontology.com/section29#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://creditontology.com/section29#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/credit-licensing-ontology#Principal> .
+<http://creditontology.com/section29#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Acting on Behalf of Principal" .
+<http://creditontology.com/section29#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#label> "actsOnBehalfOf" .
+# 
+# http://creditontology.com/section29#hasDefence
+<http://creditontology.com/section29#hasDefence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creditontology.com/section29#hasDefence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://creditontology.com/section29#hasDefence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/credit-licensing-ontology#Defence> .
+<http://creditontology.com/section29#hasDefence> <http://www.w3.org/2000/01/rdf-schema#comment> "they Must have a defence" .
+<http://creditontology.com/section29#hasDefence> <http://www.w3.org/2000/01/rdf-schema#label> "hasDefence" .
+# 
+# http://creditontology.com/section29#hasEngagedIn
+<http://creditontology.com/section29#hasEngagedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creditontology.com/section29#hasEngagedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://creditontology.com/section29#hasEngagedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/credit-licensing-ontology#CreditActivity> .
+<http://creditontology.com/section29#hasEngagedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Engage in a credit Activity" .
+<http://creditontology.com/section29#hasEngagedIn> <http://www.w3.org/2000/01/rdf-schema#label> "hasEngagedIn" .
+# 
+# http://creditontology.com/section29#hasLicense
+<http://creditontology.com/section29#hasLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creditontology.com/section29#hasLicense> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://creditontology.com/section29#hasLicense> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.example.org/credit-licensing-ontology#License> .
+<http://creditontology.com/section29#hasLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "For engaging in Credit Activity there is need of license that is required" .
+<http://creditontology.com/section29#hasLicense> <http://www.w3.org/2000/01/rdf-schema#label> "hasLicense" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://creditontology.com/section29#isExemptPrincipal
+<http://creditontology.com/section29#isExemptPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://creditontology.com/section29#isExemptPrincipal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://creditontology.com/section29#isExemptPrincipal> <http://www.w3.org/2000/01/rdf-schema#label> "isExemptPrinicipal" .
+# 
+# http://creditontology.com/section29#isWithInAuthority
+<http://creditontology.com/section29#isWithInAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://creditontology.com/section29#isWithInAuthority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://creditontology.com/section29#isWithInAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "isWithInAuthority" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#getPenalty
+<http://www.co-ode.org/ontologies/ont.owl#getPenalty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#getPenalty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Penalty> .
+<http://www.co-ode.org/ontologies/ont.owl#getPenalty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#getPenalty> <http://www.w3.org/2000/01/rdf-schema#label> "getPanalty" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#hasDefence
+<http://www.co-ode.org/ontologies/ont.owl#hasDefence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#hasDefence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Defence> .
+<http://www.co-ode.org/ontologies/ont.owl#hasDefence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#hasDefence> <http://www.w3.org/2000/01/rdf-schema#label> "hasDefence" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#hasOffence
+<http://www.co-ode.org/ontologies/ont.owl#hasOffence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#hasOffence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Offence> .
+<http://www.co-ode.org/ontologies/ont.owl#hasOffence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#hasOffence> <http://www.w3.org/2000/01/rdf-schema#label> "hasOffence" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal
+<http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> <http://www.w3.org/2000/01/rdf-schema#label> "isActingOnBehalfOfPrincipal" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Principal> .
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament> <http://www.w3.org/2000/01/rdf-schema#label> "isPrinicpalHoldingElectedParliament" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Principal> .
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity> <http://www.w3.org/2000/01/rdf-schema#label> "isPrinicpalHoldingCreditActivity" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate
+<http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate> <http://www.w3.org/2000/01/rdf-schema#label> "isRepresentativeOfBodyCorporate" .
+# 
+# http://www.example.org/credit-licensing-ontology#isValidLicense
+<http://www.example.org/credit-licensing-ontology#isValidLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/credit-licensing-ontology#isValidLicense> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#License> .
+<http://www.example.org/credit-licensing-ontology#isValidLicense> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.example.org/credit-licensing-ontology#isValidLicense> <http://www.w3.org/2000/01/rdf-schema#label> "isValidLicense" .
+# 
+# http://www.example.org/credit-licensing-ontology#licenseNumber
+<http://www.example.org/credit-licensing-ontology#licenseNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.example.org/credit-licensing-ontology#licenseNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.example.org/credit-licensing-ontology#License> .
+<http://www.example.org/credit-licensing-ontology#licenseNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.example.org/credit-licensing-ontology#licenseNumber> <http://www.w3.org/2000/01/rdf-schema#label> "LicenceNumber" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://creditontology.com/section29#CompliantAgent
+<http://creditontology.com/section29#CompliantAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#CompliantAgent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#CompliantAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://creditontology.com/section29#CompliantAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "If an agent satisfies one of the permission rules, it is compliant." .
+<http://creditontology.com/section29#CompliantAgent> <http://www.w3.org/2000/01/rdf-schema#label> "CompliantAgent" .
+# 
+# http://creditontology.com/section29#ExemptPrincipalDefence
+<http://creditontology.com/section29#ExemptPrincipalDefence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#ExemptPrincipalDefence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://creditontology.com/section29#isWithInAuthority> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://creditontology.com/section29#isExemptPrincipal> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.example.org/credit-licensing-ontology#Principal> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://creditontology.com/section29#actsOnBehalfOf> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://creditontology.com/section29#ExemptPrincipalDefence> <http://www.w3.org/2000/01/rdf-schema#label> "ExemptPrincipalDefence" .
+# 
+# http://creditontology.com/section29#LicensedPrincipal
+<http://creditontology.com/section29#LicensedPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#LicensedPrincipal> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid14 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/credit-licensing-ontology#isValidLicense> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.example.org/credit-licensing-ontology#Principal> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://creditontology.com/section29#LicensedPrincipal> <http://www.w3.org/2000/01/rdf-schema#label> "LicensedPrincipal" .
+# 
+# http://creditontology.com/section29#NonCompliantAgent
+<http://creditontology.com/section29#NonCompliantAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#NonCompliantAgent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/credit-licensing-ontology#isValidLicense> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://creditontology.com/section29#NonCompliantAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://creditontology.com/section29#NonCompliantAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent who does not satisfy any of the R3 conditions" .
+<http://creditontology.com/section29#NonCompliantAgent> <http://www.w3.org/2000/01/rdf-schema#label> "NonCompliantAgent" .
+# 
+# http://creditontology.com/section29#RepresentativeDefence
+<http://creditontology.com/section29#RepresentativeDefence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#RepresentativeDefence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://creditontology.com/section29#isWithInAuthority> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://creditontology.com/section29#LicensedPrincipal> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://creditontology.com/section29#actsOnBehalfOf> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://creditontology.com/section29#StaffOrRepresentative> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://creditontology.com/section29#RepresentativeDefence> <http://www.w3.org/2000/01/rdf-schema#label> "RepresentativeDefence" .
+# 
+# http://creditontology.com/section29#StaffOrRepresentative
+<http://creditontology.com/section29#StaffOrRepresentative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#StaffOrRepresentative> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.example.org/credit-licensing-ontology#Employee> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.example.org/credit-licensing-ontology#Director> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.example.org/credit-licensing-ontology#CreditRepresentative> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://creditontology.com/section29#StaffOrRepresentative> <http://www.w3.org/2000/01/rdf-schema#label> "StaffOrRepresentative" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity
+<http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.example.org/credit-licensing-ontology#CreditActivity> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://creditontology.com/section29#hasEngagedIn> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.example.org/credit-licensing-ontology#Agent> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Agent who involves in a Credit Activity" .
+<http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> <http://www.w3.org/2000/01/rdf-schema#label> "AgentEngagingCreditActivity" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#BodyCorporate
+<http://www.co-ode.org/ontologies/ont.owl#BodyCorporate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#BodyCorporate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Principal> .
+<http://www.co-ode.org/ontologies/ont.owl#BodyCorporate> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal entity such as a company that may act as a principal" .
+<http://www.co-ode.org/ontologies/ont.owl#BodyCorporate> <http://www.w3.org/2000/01/rdf-schema#label> "BodyCorporate" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#hasDefence> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Offence> .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent who committed an offence but has a valid defence" .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithDefence> <http://www.w3.org/2000/01/rdf-schema#label> "OffenceWithDefence" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#getPenalty> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Offence> .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent who committed an offence and received a civil penalty" .
+<http://www.co-ode.org/ontologies/ont.owl#OffenceWithPenalty> <http://www.w3.org/2000/01/rdf-schema#label> "OffenceWithPenalty" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/credit-licensing-ontology#isValidLicense> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent who holds a valid license and performs credit activity" .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a> <http://www.w3.org/2000/01/rdf-schema#label> "PermittedAgent_R3a" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent acting on behalf of a licensed principal within authorized credit activity" .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b> <http://www.w3.org/2000/01/rdf-schema#label> "PermittedAgent_R3b" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid43 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/credit-licensing-ontology#isValidLicense> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c> <http://www.w3.org/2000/01/rdf-schema#comment> "An Agent who is acting on a behalf of a principal and or a representative of body corporate(exempted from licensing requirements)" .
+<http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c> <http://www.w3.org/2000/01/rdf-schema#label> "PermittedAgent_R3c" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant
+<http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/credit-licensing-ontology#isValidLicense> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent who does not satisfy any of the R3 conditions" .
+<http://www.co-ode.org/ontologies/ont.owl#Test_NonCompliant> <http://www.w3.org/2000/01/rdf-schema#label> "Test_NonCompliant" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#Test_Offending
+<http://www.co-ode.org/ontologies/ont.owl#Test_Offending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#Test_Offending> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://www.co-ode.org/ontologies/ont.owl#hasOffence> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.co-ode.org/ontologies/ont.owl#Test_Offending> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Agent> .
+<http://www.co-ode.org/ontologies/ont.owl#Test_Offending> <http://www.w3.org/2000/01/rdf-schema#comment> "Any agent who committed an offence under Section 29" .
+<http://www.co-ode.org/ontologies/ont.owl#Test_Offending> <http://www.w3.org/2000/01/rdf-schema#label> "Test_Offending" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence
+<http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://www.example.org/credit-licensing-ontology#isValidLicense> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.example.org/credit-licensing-ontology#Offence> .
+<http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence> <http://www.w3.org/2000/01/rdf-schema#comment> "An offence where an agent engaged in credit activity without holding a license" .
+<http://www.co-ode.org/ontologies/ont.owl#UnlicensedCreditOffence> <http://www.w3.org/2000/01/rdf-schema#label> "UnlicensedCreditOffence" .
+# 
+# http://www.example.org/credit-licensing-ontology#Agent
+<http://www.example.org/credit-licensing-ontology#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# http://www.example.org/credit-licensing-ontology#Conduct
+<http://www.example.org/credit-licensing-ontology#Conduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Conduct> <http://www.w3.org/2000/01/rdf-schema#label> "Conduct" .
+# 
+# http://www.example.org/credit-licensing-ontology#CourtCase
+<http://www.example.org/credit-licensing-ontology#CourtCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#CourtCase> <http://www.w3.org/2000/01/rdf-schema#label> "CourtCase" .
+# 
+# http://www.example.org/credit-licensing-ontology#CreditActivity
+<http://www.example.org/credit-licensing-ontology#CreditActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#CreditActivity> <http://www.w3.org/2000/01/rdf-schema#label> "CreditActivity" .
+# 
+# http://www.example.org/credit-licensing-ontology#CreditRepresentative
+<http://www.example.org/credit-licensing-ontology#CreditRepresentative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#CreditRepresentative> <http://www.w3.org/2000/01/rdf-schema#label> "CreditRepresentative" .
+# 
+# http://www.example.org/credit-licensing-ontology#Defence
+<http://www.example.org/credit-licensing-ontology#Defence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Defence> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition that excuses the agent’s conduct, as defined in Section 29(3) and 29(4)" .
+<http://www.example.org/credit-licensing-ontology#Defence> <http://www.w3.org/2000/01/rdf-schema#label> "Defence" .
+# 
+# http://www.example.org/credit-licensing-ontology#Director
+<http://www.example.org/credit-licensing-ontology#Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Director> <http://www.w3.org/2000/01/rdf-schema#label> "Director" .
+# 
+# http://www.example.org/credit-licensing-ontology#Employee
+<http://www.example.org/credit-licensing-ontology#Employee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Employee> <http://www.w3.org/2000/01/rdf-schema#label> "Employee" .
+# 
+# http://www.example.org/credit-licensing-ontology#License
+<http://www.example.org/credit-licensing-ontology#License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#License> <http://www.w3.org/2000/01/rdf-schema#comment> "A license that authorizes a person to engage in credit activity" .
+<http://www.example.org/credit-licensing-ontology#License> <http://www.w3.org/2000/01/rdf-schema#label> "License" .
+# 
+# http://www.example.org/credit-licensing-ontology#Offence
+<http://www.example.org/credit-licensing-ontology#Offence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Offence> <http://www.w3.org/2000/01/rdf-schema#comment> "An unlawful action that violates Section 29" .
+<http://www.example.org/credit-licensing-ontology#Offence> <http://www.w3.org/2000/01/rdf-schema#label> "Offence" .
+# 
+# http://www.example.org/credit-licensing-ontology#Penalty
+<http://www.example.org/credit-licensing-ontology#Penalty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Penalty> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent who committed an activity without a licencse or all three R3 condtions can have a penalty that may be imprisonment or fine upto 5000 or both" .
+<http://www.example.org/credit-licensing-ontology#Penalty> <http://www.w3.org/2000/01/rdf-schema#label> "Penalty" .
+# 
+# http://www.example.org/credit-licensing-ontology#Person
+<http://www.example.org/credit-licensing-ontology#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# http://www.example.org/credit-licensing-ontology#Principal
+<http://www.example.org/credit-licensing-ontology#Principal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Principal> <http://www.w3.org/2000/01/rdf-schema#comment> "The person or entity on whose behalf an agent may act." .
+<http://www.example.org/credit-licensing-ontology#Principal> <http://www.w3.org/2000/01/rdf-schema#label> "Prinicpal" .
+# 
+# http://www.example.org/credit-licensing-ontology#Requirement
+<http://www.example.org/credit-licensing-ontology#Requirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#Requirement> <http://www.w3.org/2000/01/rdf-schema#label> "Requirment" .
+# 
+# http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence
+<http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.example.org/credit-licensing-ontology#UnlicensedCreditOffence> <http://www.w3.org/2000/01/rdf-schema#label> "UnlicensedCreditOffence" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://creditontology.com/section29#CreditActivity
+<http://creditontology.com/section29#CreditActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://creditontology.com/section29#a9
+<http://creditontology.com/section29#a9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://creditontology.com/section29#a9> <http://creditontology.com/section29#hasEngagedIn> <http://creditontology.com/section29#CreditActivity> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#A2
+<http://www.co-ode.org/ontologies/ont.owl#A2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#A2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#A2> <http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#A2> <http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#A2> <http://www.co-ode.org/ontologies/ont.owl#isPrincipalHoldingCreditActivity> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#AgentOffending1
+<http://www.co-ode.org/ontologies/ont.owl#AgentOffending1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentOffending1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentOffending1> <http://www.co-ode.org/ontologies/ont.owl#hasOffence> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence> <http://www.co-ode.org/ontologies/ont.owl#hasDefence> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithDefence> <http://www.co-ode.org/ontologies/ont.owl#hasOffence> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://creditontology.com/section29#CompliantAgent> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentWithLicense> <http://www.example.org/credit-licensing-ontology#isValidLicense> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#Agent_R3C
+<http://www.co-ode.org/ontologies/ont.owl#Agent_R3C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#Agent_R3C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#Agent_R3C> <http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#Agent_R3C> <http://www.co-ode.org/ontologies/ont.owl#isPrincipalElectedInParliament> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#Agent_R3C> <http://www.co-ode.org/ontologies/ont.owl#isRepresentativeOfBodyCorporate> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#Agent_R3C> <http://www.example.org/credit-licensing-ontology#isValidLicense> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty
+<http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty> <http://www.co-ode.org/ontologies/ont.owl#getPenalty> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#AgentwithPenalty> <http://www.co-ode.org/ontologies/ont.owl#hasOffence> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#BadAgent
+<http://www.co-ode.org/ontologies/ont.owl#BadAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#BadAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#BadAgent> <http://www.co-ode.org/ontologies/ont.owl#getPenalty> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#BadAgent> <http://www.example.org/credit-licensing-ontology#isValidLicense> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#CignoAustralia
+<http://www.co-ode.org/ontologies/ont.owl#CignoAustralia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#CignoAustralia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#CignoAustralia> <http://www.co-ode.org/ontologies/ont.owl#getPenalty> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#CignoAustralia> <http://www.co-ode.org/ontologies/ont.owl#hasDefence> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#CignoAustralia> <http://www.co-ode.org/ontologies/ont.owl#hasOffence> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#CignoAustralia> <http://www.example.org/credit-licensing-ontology#isValidLicense> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#bsfSolutions
+<http://www.co-ode.org/ontologies/ont.owl#bsfSolutions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#bsfSolutions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#bsfSolutions> <http://www.co-ode.org/ontologies/ont.owl#getPenalty> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#bsfSolutions> <http://www.co-ode.org/ontologies/ont.owl#hasDefence> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#bsfSolutions> <http://www.co-ode.org/ontologies/ont.owl#hasOffence> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#bsfSolutions> <http://www.example.org/credit-licensing-ontology#isValidLicense> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent
+<http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.co-ode.org/ontologies/ont.owl#AgentEngagingCreditActivity> .
+<http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent> <http://www.co-ode.org/ontologies/ont.owl#hasOffence> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.co-ode.org/ontologies/ont.owl#unLicOffAgent> <http://www.example.org/credit-licensing-ontology#isValidLicense> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
