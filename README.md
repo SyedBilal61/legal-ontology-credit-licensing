@@ -6,6 +6,24 @@
  it will create and index.html in a doc folder you can open the doc folder and and then open Html file to see 
  the widoco documentation
   
+
+#Technology Stack 
+
+Protégé
+yEd Graph Editor
+GraphDB
+WIDOCO
+SPARQL
+OWL
+RDF
+GitHub
+GitHub Pages
+Visual Studio Code
+HTML 
+CSS
+JAVASCRIP
+
+
 #Reporoduceability and Availability Section 
 
 Here I will describe the section so that if someone want to practice and run and check the reasoning system even he is non tecnical guy so it will be easiar for him to understand the process.
