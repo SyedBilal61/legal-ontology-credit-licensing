@@ -1,51 +1,87 @@
-🟢 BASIC QUERIES (must know)
+🟢 BASIC QUERIES
+
+
+
 1️⃣ Get all agents
 SELECT ?agent
 WHERE {
   ?agent a <http://www.example.org/credit-licensing-ontology#Agent> .
 }
+
+
+
 2️⃣ Get all individuals in the ontology
 SELECT ?ind
 WHERE {
   ?ind a ?type .
 }
+
+
+
 3️⃣ Get all agents engaged in credit activity
 SELECT ?agent
 WHERE {
   ?agent <http://creditontology.com/section29#hasEngagedIn> ?activity .
 }
-🟢 COMPLIANCE QUERIES (VERY IMPORTANT)
+
+
+
+🟢 COMPLIANCE QUERIES
+
+
+
 4️⃣ Get compliant agents (main result)
 SELECT ?agent
 WHERE {
   ?agent a <http://creditontology.com/section29#CompliantAgent> .
 }
+
+
+
 5️⃣ Get non-compliant agents
 SELECT ?agent
 WHERE {
   ?agent a <http://creditontology.com/section29#NonCompliantAgent> .
 }
+
+
+
 6️⃣ Get agents with valid license
 SELECT ?agent
 WHERE {
   ?agent <http://www.example.org/credit-licensing-ontology#isValidLicense> true .
 }
+
+
+
 7️⃣ Get agents without license
 SELECT ?agent
 WHERE {
   ?agent <http://www.example.org/credit-licensing-ontology#isValidLicense> false .
 }
-🟢 LEGAL LOGIC QUERIES (HIGH VALUE)
+
+
+
+🟢 LEGAL LOGIC QUERIES 
+
+
+
 8️⃣ Agents committing offences
 SELECT ?agent
 WHERE {
   ?agent <http://www.co-ode.org/ontologies/ont.owl#hasOffence> true .
 }
+
+
+
 9️⃣ Agents with penalties
 SELECT ?agent
 WHERE {
   ?agent <http://www.co-ode.org/ontologies/ont.owl#getPenalty> true .
 }
+
+
+
 🔟 Agents with offence but NO defence
 SELECT ?agent
 WHERE {
@@ -53,36 +89,55 @@ WHERE {
   ?agent <http://www.co-ode.org/ontologies/ont.owl#hasDefence> false .
 }
 
-💡 This is a very strong legal reasoning query — good for thesis.
 
-🟢 R3 RULES (VERY IMPORTANT FOR YOUR PROJECT)
+
+
+
+🟢 R3 RULES
+
+
+
 1️⃣1️⃣ Agents satisfying R3a
 SELECT ?agent
 WHERE {
   ?agent a <http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3a> .
 }
+
+
+
 1️⃣2️⃣ Agents satisfying R3b
 SELECT ?agent
 WHERE {
   ?agent a <http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3b> .
 }
+
+
+
 1️⃣3️⃣ Agents satisfying R3c
 SELECT ?agent
 WHERE {
   ?agent a <http://www.co-ode.org/ontologies/ont.owl#PermittedAgent_R3c> .
 }
-🟢 ADVANCED (FOR HIGH MARKS)
+
+
+
 1️⃣4️⃣ Non-compliant agents with penalty (real violation)
 SELECT ?agent
 WHERE {
   ?agent a <http://creditontology.com/section29#NonCompliantAgent> .
   ?agent <http://www.co-ode.org/ontologies/ont.owl#getPenalty> true .
 }
+
+
+
 1️⃣5️⃣ Agents acting on behalf of principal
 SELECT ?agent
 WHERE {
   ?agent <http://www.co-ode.org/ontologies/ont.owl#isActingOnBehalfOfPrincipal> true .
 }
+
+
+
 1️⃣6️⃣ Full reasoning query (VERY IMPRESSIVE)
 SELECT ?agent
 WHERE {
@@ -90,5 +145,3 @@ WHERE {
   ?agent <http://www.example.org/credit-licensing-ontology#isValidLicense> false .
 }
 
-👉 This finds:
-Agents doing credit activity WITHOUT license
