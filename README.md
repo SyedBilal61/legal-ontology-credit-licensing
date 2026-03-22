@@ -11,18 +11,44 @@ the widoco documentation
 \#Technology Stack
 
 Protégé
+
+
 yEd Graph Editor
+
+
 GraphDB
+
+
 WIDOCO
+
+
 SPARQL
+
+
 OWL
+
+
 RDF
+
+
 GitHub
+
+
 GitHub Pages
+
+
 Visual Studio Code
+
+
 HTML
+
+
 CSS
+
+
 JAVASCRIP
+
+
 
 
 
